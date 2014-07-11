@@ -1,0 +1,6 @@
+      invoke  active_record
+      create    db/migrate/20140710220548_create_vegetables.rb
+      create    app/models/vegetable.rb
+      invoke    test_unit
+      create      test/models/vegetable_test.rb
+      create      test/fixtures/vegetables.yml

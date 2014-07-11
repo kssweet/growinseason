@@ -1,9 +1,34 @@
 Rails.application.routes.draw do
+  # get 'harvests/index'
+
+  # get 'harvests/create'
+
+  # get 'harvests/update'
+
+  # get 'harvests/destroy'
+
+  # get 'vegetables/index'
+
+  # get 'vegetables/create'
+
+  # get 'vegetables/update'
+
+  # get 'vegetables/destroy'
+
+  # get 'community_shares/index'
+
+  # get 'community_shares/create'
+
+  # get 'community_shares/update'
+
+  # get 'community_shares/destroy'
+
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
