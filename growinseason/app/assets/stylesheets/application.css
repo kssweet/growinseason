@@ -87,10 +87,11 @@ h1{
   font-weight: 300;
   font-weight: lighter;
   text-align: center;
-  padding-top: 175px;
+  padding-top: 200px;
   font-size: 150px;
   color: #ffffff;
   opacity: .8;
+  position: relative;
 
 }
 
@@ -203,6 +204,14 @@ button.customer_enter{
   margin-left: 25px;
 
 
+}
+
+p.alert-success{
+  display:none;
+}
+
+p.alert-danger{
+  display:none;
 }
 
 
