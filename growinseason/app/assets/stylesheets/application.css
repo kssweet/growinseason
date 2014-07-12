@@ -140,7 +140,7 @@ a{
   font-weight: 300;
   font-style: lighter;
   letter-spacing: 2px;
-  color: #8d8d8d;
+  color: #b2b2b2;
   font-size: 10px;
   text-decoration: none;
   text-align: center;
@@ -156,7 +156,7 @@ p.links{
   font-weight: 300;
   font-style: lighter;
   letter-spacing: 2px;
-  color: #8d8d8d;
+  color: #b2b2b2;
   font-size: 10px;
   text-decoration: none;
   text-align: center;
@@ -166,6 +166,7 @@ p.links{
 
 form.customer_search{
   margin-top: 50px;
+  margin-right: 10px;
   float: middle;
   text-align: center;
 }

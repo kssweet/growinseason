@@ -8,7 +8,7 @@
   <hr class = "topline">
   
   <div class = "summary">
-  <h3>find out the weekly harvest from your local CSA, Farmer, or Market and get on the spot recipes for the incoming crop.</h3>
+  <h3>find out the weekly harvest from your local CSA, Farmer, or Market and get on the spot recipes for the incoming crop. Enter your zip code below!</h3>
   </div>
   
   <hr class = "bottomline">
@@ -21,7 +21,7 @@
   <div class = "nav">
     
     <% if user_signed_in? %>
-    <h4>WELCOME BACK, <%= current_user.email %> - Remember to UPDATE YOUR HARVEST LIST!</h4>
+    <h4>WELCOME BACK, <%= current_user.email %> - JUST CLICK HERE UPDATE YOUR HARVEST LIST!</h4>
     <p class = "links">
         - <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> or
         <%= link_to 'Edit Your User Info', edit_user_registration_path, :class => 'navbar-link' %> -
