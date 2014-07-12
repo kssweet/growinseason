@@ -4,13 +4,13 @@ class CommunitySharesController < ApplicationController
 
   def index
     @csa = CommunityShare.all
-    respond_with csa
+    # respond_with csa
   end
 
   def show
     # @csa = CommunityShare.find_by_zip_code(params[:zip_code])
     @csa = CommunityShare.all
-    respond_with csa
+    # respond_with csa
   end
 
   def create

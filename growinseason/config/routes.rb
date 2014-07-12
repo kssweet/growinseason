@@ -5,9 +5,9 @@ Rails.application.routes.draw do
 
   root to: 'welcome#index'
 
-  # resources :community_shares
-  # resources :vegetables
-  # resources :harvests
+  resources :community_shares
+  resources :vegetables
+  resources :harvests
 
 
 end
