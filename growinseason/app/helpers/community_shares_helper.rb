@@ -2,11 +2,12 @@ module CommunitySharesHelper
     class Recipe
 
     @@url_base = "http://api.yummly.com/v1/api/recipes?_app_id=ab7a6205&_app_key="
-    @@client_id = Rails.application.secrets.yumly_top_id
-    @@search = "&q=#{(params[:foodsearch])}"
+    @@search_id = Rails.application.secrets.yumly_search_id
     @@recipe_url = "http://www.yummly.com/recipe/"
 
     # also will need something that tacks onto end of @@recipe_url using the :url from meals array
+    @@food_search = "&q=onions"
+
 
     
 
@@ -15,7 +16,7 @@ module CommunitySharesHelper
     end
 
     def self.recipes
-      recipes = HTTParty.get(@@url_base + @@client_id + @@search)
+      recipes = HTTParty.get(@@url_base + @@search_id + @@food_search)
       recipes = recipes["matches"]
     end
 

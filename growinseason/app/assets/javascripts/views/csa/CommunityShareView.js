@@ -7,9 +7,9 @@ CommunityShareapp.Views.CommunityShareView = Backbone.View.extend({
     this.listenTo( this.model, "destroy", this.remove );
   },
 
-  tagName: 'li',
-  template: _.template( $('#csa_template').html() ),
-  editTemplate: _.template( $('#csa_edit_template').html() ),
+  tagName: "li",
+  template: _.template( $("#csa-template").html() ),
+  editTemplate: _.template( $("#csa-edit-template").html() ),
 
   events: {
     'click [data-action="destroy"]' : 'destroyCommunityShare',
@@ -34,7 +34,7 @@ CommunityShareapp.Views.CommunityShareView = Backbone.View.extend({
     var that = this;
     this.$el.html(this.editTemplate( this.model.attributes ));
 
-    this.$el.find('form').on("submit"), function(e){
+    this.$el.find('form').on("submit", function(e){
         e.preventDefault();
         var nameField = that.$el.find('input');
         var newName = nameField.val();

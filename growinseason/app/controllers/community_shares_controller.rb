@@ -1,7 +1,8 @@
 class CommunitySharesController < ApplicationController
   before_action :authenticate_user!
-  respond_to :html, :json
-  # include RecipeHelper
+  respond_to :json
+  protect_from_forgery except: [:update, :create]
+  include CommunitySharesHelper
 
     #      community_sharesGET    /community_shares(.:format)          community_shares#index
     #                      POST   /community_shares(.:format)          community_shares#create
@@ -13,6 +14,7 @@ class CommunitySharesController < ApplicationController
     #                      DELETE /community_shares/:id(.:format)      community_shares#destroy
 
   def index
+    @recipes = Recipe.retrieve_recipes
     community_shares = CommunityShare.all
     respond_with community_shares
   end
@@ -25,6 +27,11 @@ class CommunitySharesController < ApplicationController
   def destroy
     community_share = CommunityShare.find(params[:id])
     community_share.destroy
+    respond_with community_share
+  end
+
+  def show
+    community_share = CommunityShare.create(community_share_params)
     respond_with community_share
   end
 
