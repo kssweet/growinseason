@@ -1,31 +1,46 @@
 class CommunitySharesController < ApplicationController
+  before_action :authenticate_user!
+  respond_to :html, :json
+  # include RecipeHelper
 
-  respond_to :json
+    #      community_sharesGET    /community_shares(.:format)          community_shares#index
+    #                      POST   /community_shares(.:format)          community_shares#create
+    #  new_community_share GET    /community_shares/new(.:format)      community_shares#new
+    # edit_community_share GET    /community_shares/:id/edit(.:format) community_shares#edit
+    #      community_share GET    /community_shares/:id(.:format)      community_shares#show
+    #                      PATCH  /community_shares/:id(.:format)      community_shares#update
+    #                      PUT    /community_shares/:id(.:format)      community_shares#update
+    #                      DELETE /community_shares/:id(.:format)      community_shares#destroy
 
   def index
-    @csa = CommunityShare.all
-    # respond_with csa
-  end
-
-  def show
-    # @csa = CommunityShare.find_by_zip_code(params[:zip_code])
-    @csa = CommunityShare.all
-    # respond_with csa
+    community_shares = CommunityShare.all
+    respond_with community_shares
   end
 
   def create
-  end
-
-  def update
+    community_share = CommunityShare.create(community_share_params)
+    respond_with community_share
   end
 
   def destroy
+    community_share = CommunityShare.find(params[:id])
+    community_share.destroy
+    respond_with community_share
   end
+
+
+
+  def update
+    community_share = CommunityShare.find(params[:id])
+    community_share.update(communty_share_params)
+    respond_with community_share
+  end
+
 
   private 
   
-  def csa_params
-    params.require(:csa).permit(:name)
+  def community_share_params
+    params.require(:community_share).permit(:name)
   end
 
 end

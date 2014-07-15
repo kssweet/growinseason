@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   root to: 'welcome#index'
 
-  resources :community_shares
+  resources :community_shares, except: [:new, :edit]
   resources :vegetables
   resources :harvests
 

@@ -1,2 +1,30 @@
-<h1>CommunityShares#index</h1>
-<p>Find me in app/views/community_shares/index.html.erb</p>
+<head>
+
+
+  <script type = "text/template" id ='csa_template'>
+    <button data-action="create">CREATE CSA</button>
+    <button data-action="destroy">DELETE CSA</button>
+    <button data-action="edit">EDIT INFO</button>
+  </script>
+
+  <script type="text/template" id="csa_edit_template">
+    <form>
+      <input type="text" placeholder="<= name %>"
+    </form>
+    <button data-action="cancel">CANCEL</button>
+  </script>
+
+
+</head>
+
+<body>
+  <div class="community_share_container">
+    <div class="community_share">
+      <form class="community_share_form">
+        <input name="community_share_name" type="text" placeholder="Name your CSA">
+      </form>
+      
+      <ul class="community_share_list"></ul>
+    </div>
+  </div>
+</body>

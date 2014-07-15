@@ -1,6 +1,3 @@
-
-
-
 <body class = "welcome">
   
   <h1>GROWIN' SEASON</h1>
@@ -13,7 +10,7 @@
   
   <hr class = "bottomline">
 
-  <form action = "community_shares/show" class = "customer_search">
+  <form action = "community_shares" class = "customer_search">
   <input type = "text" class = "customer_zip" placeholder="ENTER YOUR ZIP CODE"><button class = "customer_enter">SUBMIT</button>
   </form>
   
@@ -21,7 +18,7 @@
   <div class = "nav">
     
     <% if user_signed_in? %>
-    <h4>WELCOME BACK, <%= current_user.email %> - JUST CLICK HERE UPDATE YOUR HARVEST LIST!</h4>
+    <h4>WELCOME BACK, <%= current_user.email %> - JUST CLICK HERE TO UPDATE YOUR HARVEST LIST! </h4>
     <p class = "links">
         - <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> or
         <%= link_to 'Edit Your User Info', edit_user_registration_path, :class => 'navbar-link' %> -

@@ -1,18 +1,18 @@
-class UserController < ApplicationController
+# class UserController < ApplicationController
 
-    protect_from_forgery with: :exception
+#     protect_from_forgery with: :exception
     
-    before_action :authenticate_user!
+#     before_action :authenticate_user!
 
-  def index
-  end
+#   def index
+#   end
 
-  def create
-  end
+#   def create
+#   end
 
-  def update
-  end
+#   def update
+#   end
 
-  def destroy
-  end
-end
+#   def destroy
+#   end
+# end

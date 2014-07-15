@@ -2,11 +2,27 @@
 <html>
 <head>
   <title>Growinseason</title>
+  <meta charset="utf-8">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
+      <!-- app -->
+    <script type="text/javascript" src='app/assets/javascripts/app.js'></script>
+
+    <!-- Models -->
+    <script type="text/javascript" src='app/assets/javascripts/models/CommunityShare.js'></script>
+
+    <!-- Collections -->
+    <script type="text/javascript" src='app/assets/javascripts/collections/CommunityShareCollection.js'></script>
+
+    <!-- Views -->
+    <script type="text/javascript" src='app/assets/javascripts/views/csa/CommunityShareView.js'></script>
+    <script type="text/javascript" src='app/assets/javascripts/views/csa/CommunityShareListView.js'></script>
+
+
 </head>
+
 <body>
 
 <ul class="nav">
